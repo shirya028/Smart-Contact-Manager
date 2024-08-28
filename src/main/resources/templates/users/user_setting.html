@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeLeaf.org" th:replace="users/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Setting Page</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+		
+		<!-- Dark Mode card  -->
+			<div class="card px-3 py-2" >
+				<div style="display: flex ; justify-content:space-between">
+					<div >	
+						<h3>Switch to Dark Mode</h3>
+						<p>customize the website by applying dark/light mode</p>
+					</div>
+					<div class="my-auto">
+						<label class="switch">
+						  <input type="checkbox">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			
+		<!-- Export Contact card  -->
+			<div class="card px-3 mt-2" >
+				<div style="display: flex ; justify-content:space-between">
+					<div >	
+						<h3>Export Contacts</h3>
+						<p>This option will export all your contacts in an ms-excel file</p>
+					</div>
+					<div class="my-auto mr-2">
+						<a href=""><i class="fa-solid fa-file-export fa-2xl" style="color: #bdc0c7;"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Profile Setting card  -->
+			<div class="card px-3 py-2 mt-2" >
+				<h3>Personal Setting</h3>
+				<div >
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2 ;">	
+						<a  class="simple-anchor" th:href="@{/users/user-profile}"><p>Change your personal details <i class="fa-regular fa-pen-to-square fa-lg"></i></p>  </a>
+					</div>
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2">	
+						<a class="simple-anchor" href=""><p>Change your account's password <i class="fa-solid fa-key fa-lg"></i></p> </a>
+					</div>
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2">	
+						<a class="simple-anchor"  href=""><p>Refer a friend <i class="fa-solid fa-user-group fa-lg"></i></p> </a>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- Help card  -->
+			<div class="card px-3 py-2 mt-2" >
+				<h3>More Info and Support</h3>
+				<div >
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2 ;">	
+						<a  class="simple-anchor" th:href="@{/users/user-profile}"><p>Privacy and policy  <i class="fa-solid fa-book fa-lg"></i></p>  </a>
+					</div>
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2 ;">	
+						<a  class="simple-anchor" th:href="@{/users/user-profile}"><p>Report a problem  <i class="fa-solid fa-bug fa-lg"></i></p>  </a>
+					</div>
+					<div class="mt-2 py-2 px-2" style="background: #e2e2e2">	
+						<a class="simple-anchor"  href=""><p>Contact Us  <i class="fa-solid fa-phone fa-lg"></i></p> </a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Logout card  -->
+			<div class="card px-3 mt-2 mb-3" >
+				<h3>Logout</h3>
+				<div class="card-body">
+					<button type="button" class="btn btn-danger">Logout</button>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+</body>
+</html>

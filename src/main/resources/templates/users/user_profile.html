@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeLeaf.org" th:replace="users/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Home Page</title>
+</head>
+<body>
+	<section >
+		<div class="conatiner " >
+        <div class="card mx-auto mt-5" style="width: 50%; height: 85vh;" >
+            <img th:src="@{/images/profile_back_img.png}" alt="" style="height: 35%;">
+            <div class="card-body">
+                <div style="display: flex; justify-content: center; margin-top: -13;"> 
+                    <img th:src="@{/images/defualt_image.png}" style="border-radius:50%; width: 150px; height: 150px; margin-top: -100px;">
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: -13;">
+                  <h1><span th:text="${user.name}"></span></h1>
+                </div>
+                
+                <div class="table-responsive">
+                <table class="table mt-5">
+                    
+                    <tbody>
+                        <th scope="row">email :</th>
+                        <td>  <span th:text="${user.email}"></span> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">role :</th>
+                        <td><span th:text="${user.role}"></span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">description :</th>
+                        <td><span th:text="${user.description}"></span></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+	</section>
+</body>
+</html>
